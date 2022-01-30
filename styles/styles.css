@@ -277,8 +277,12 @@ h2, h3, h4, h5 {
   letter-spacing: 2.1px;
 }
 
+h4 {
+  font-size: 26px;
+}
+
 header h5 {
-  font-size: 1.2rem;
+  font-size: 24px;
   line-height: 1;
 }
 
@@ -307,6 +311,10 @@ p.postDate {
 }
 p.postDate span {
   font-weight: bold;
+}
+p.commentDate {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 button {
@@ -627,18 +635,20 @@ main.blog {
   display: -ms-flexbox;
   display: flex;
 }
-.blogContainer .blogContent {
+
+.blogContent {
   width: 62.5%;
 }
-.blogContainer .blogContent .blogPost {
+.blogContent .blogPost {
   background-color: #F5F5F5;
+  margin-bottom: 50px;
   padding-top: 550px;
   padding-left: 7%;
   border-right: 10px solid #F8FB05;
   border-bottom: 10px solid #F8FB05;
   position: relative;
 }
-.blogContainer .blogContent .blogPost::before {
+.blogContent .blogPost::before {
   content: "";
   background-image: url("../assets/blog-post-image.jpg");
   background-position: top center;
@@ -651,16 +661,32 @@ main.blog {
   -webkit-box-shadow: 20px 20px 0 0 #F8FB05;
           box-shadow: 20px 20px 0 0 #F8FB05;
 }
-.blogContainer .blogContent .blogPost p {
+.blogContent .blogPost p {
   margin-bottom: 50px;
 }
-.blogContainer .blogContent .blogPost p.postDate {
+.blogContent .blogPost p.postDate {
   margin-top: 10px;
 }
-.blogContainer .blogContent .blogComments {
+
+.blogComments {
   padding-left: 7%;
 }
-.blogContainer .blogSidebar {
+.blogComments .commentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+.blogComments .commentContainer .imageContainer {
+  width: 10%;
+}
+.blogComments .commentContainer .commentTextContainer {
+  width: 90%;
+  padding-left: 50px;
+}
+
+.blogSidebar {
   width: 37.5%;
   padding-left: 12.5%;
   position: absolute;
