@@ -1,40 +1,53 @@
-.homeHeader {
-    background-image: url('../assets/header-home.jpg');
+header {    
     background-position: center;
     background-size: cover;
     width: 100%;
+    padding-bottom: 250px;
+    .navContainer {        
+        display: flex;
+        h5 {
+            padding-top: 30px;
+            padding-right: 50%;
+            width: 700px;
+        }
+        margin-bottom: 200px;
+    }
+}
+
+.homeHeader {
+    background-image: url('../assets/header-home.jpg');
     min-height: 750px;
     margin-bottom: 350px;
+    padding-bottom: 0;
+    .navContainer {
+        margin-bottom: 50px;
+        //position: relative; it's easier to position the pseudo element relative to the browser window than the parent element
+        h5 {
+            opacity: 0;
+            cursor: default;
+        }
+        &::after {
+        content: '';
+            background-image: url("../assets/header-box.png");
+            background-position: top left;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 300px;
+            left: 0%;
+            max-height: 770px;
+            height: 100%;
+            width: clamp(600px, 55vw, 1100px);
+        }
+    }
+
+    h1 {
+        padding-left: 10%;
+    }
 }
 
-.homeNavContainer,
-.blogNavContainer,
-.contactNavContainer {
-    display: flex;
-    h5 {
-        width: 50%;
-    }
-}
-
-.homeNavContainer {
-    //position: relative; it's easier to position the pseudo element relative to the browser window than the parent element
-    h5 {
-        opacity: 0;
-        cursor: default;
-    }
-    &::after {
-    content: '';
-        background-image: url("../assets/header-box.png");
-        background-position: top left;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 300px;
-        left: 0%;
-        max-height: 770px;
-        height: 100%;
-        width: clamp(600px, 55vw, 1100px);
-    }
+.blogHeader {
+    background-image: url('../assets/blog-image.jpg');
 }
 
 .navLinks {
@@ -56,6 +69,5 @@
 h1{
     width: 50%;
     word-wrap: normal;
-    padding-left: 10%;
     margin: 0;
 }
