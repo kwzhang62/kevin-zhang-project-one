@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: $secondary;
+}
+
+.wrapper {
+    max-width: 1920px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+}
+
+.imageContainer {
+    position: relative;
+    img {
+        width: 100%;
+        position: absolute;
+    }
+}
+
+button.defaultButton {
+    color: $secondary;
+    background-color: $buttonColour;
+    padding: 10px 20px 4px;
+    border: 1px solid $buttonColour;
+    margin-top: 10px;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+         background-color: $secondary;
+         color: $buttonColour;
+    }
+    // &.secondary {
+    //     background-color: transparent;
+    //     border-color: $solidWhite;
+    //     color: $solidWhite;
+    //     padding: 8px 12px;
+    //     &:hover {
+    //         background-color: $solidWhite;
+    //         color:$primary;
+    //     }
+    //     &:focus {
+    //         background-color: $solidWhite;
+    //         color:$primary;
+    //     }
+    // }
+    // &.solid {
+    //     color: $solidWhite;
+    //     background-color: $primary;
+    //     &:hover {
+    //         color: $primary;
+    //         background-color: $solidWhite;
+    //     }
+    // }
+    // &.menuIcon {
+    //     display: inherit;
+    //     padding: 0;
+    //     border: none;
+    //     &:hover {
+    //         background-color: transparent;
+    //     }
+    //     &:focus {
+    //         background-color: transparent;
+    //     }
+    // }
+}
