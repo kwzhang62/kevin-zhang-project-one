@@ -70,6 +70,13 @@ p {
     font-size: 20px;
     line-height: 32px;
     letter-spacing: 2px;
+    &.postDate {
+        font-style: italic;
+        letter-spacing: 1px;
+        span {
+            font-weight: bold;
+        }
+    }
 }
 
 button {
