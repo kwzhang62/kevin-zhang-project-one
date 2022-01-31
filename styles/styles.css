@@ -300,7 +300,8 @@ header h5 {
 
 p,
 input,
-textarea {
+textarea,
+.bodyCopy {
   font-family: "Lato";
   font-weight: normal;
   font-size: 20px;
@@ -309,18 +310,21 @@ textarea {
 }
 p.postDate,
 input.postDate,
-textarea.postDate {
+textarea.postDate,
+.bodyCopy.postDate {
   font-style: italic;
   letter-spacing: 1px;
 }
 p.postDate span,
 input.postDate span,
-textarea.postDate span {
+textarea.postDate span,
+.bodyCopy.postDate span {
   font-weight: bold;
 }
 p.commentDate,
 input.commentDate,
-textarea.commentDate {
+textarea.commentDate,
+.bodyCopy.commentDate {
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -431,6 +435,10 @@ header .navContainer h5 {
 
 .blogHeader {
   background-image: url("../assets/blog-image.jpg");
+}
+
+.contactHeader {
+  background-image: url("../assets/contact-image.jpg");
 }
 
 .navLinks {
@@ -730,6 +738,39 @@ main.blog {
   margin-bottom: 20px;
 }
 
+main.contact {
+  background-color: #E0FDDF;
+}
+
+.contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contactInfoContainer {
+  width: 25%;
+  padding-top: 150px;
+  padding-left: 5%;
+}
+.contactInfoContainer a.bodyCopy + p {
+  margin-top: 30px;
+}
+
+.contactSocials {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+.contactSocials a i {
+  color: #065635;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -743,6 +784,23 @@ form {
 .commentsForm input,
 .commentsForm textarea {
   background-color: #E0FDDF;
+}
+
+.contactForm input,
+.contactForm textarea {
+  background-color: #F5F5F5;
+}
+
+.contactFormContainer {
+  position: relative;
+  left: -65px;
+  top: -150px;
+  background-color: #F5F5F5;
+  width: 75%;
+  padding: 65px;
+}
+.contactFormContainer input {
+  margin-top: 0;
 }
 
 .formUserInfo {

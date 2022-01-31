@@ -251,3 +251,32 @@ main.blog {
         margin-bottom: 20px;
     }
 }
+
+// contact sections
+
+main.contact {
+    background-color: $primary;
+}
+
+.contactContainer {
+    display: flex;
+}
+
+.contactInfoContainer {
+    width: 25%;
+    padding-top: 150px;
+    padding-left: 5%;
+    a.bodyCopy + p {
+        margin-top: 30px;
+    }
+}
+
+.contactSocials {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    a i {        
+        color: $buttonColour;
+    }
+}

@@ -10,6 +10,25 @@ form {
     }
 }
 
+.contactForm {
+    input,
+    textarea {
+        background-color: $secondary;
+    }
+}
+
+.contactFormContainer {
+    position: relative;
+    left: -65px;
+    top: -150px;
+    background-color: $secondary;
+    width: 75%;
+    padding: 65px;
+    input {
+        margin-top: 0;
+    }
+}
+
 .formUserInfo {
     display: flex;
     justify-content: space-between;

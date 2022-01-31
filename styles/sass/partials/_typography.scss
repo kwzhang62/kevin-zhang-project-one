@@ -70,7 +70,8 @@ header h5 {
 
 p,
 input,
-textarea {
+textarea,
+.bodyCopy {
     font-family: $bodyFont;
     font-weight: normal;
     font-size: 20px;
