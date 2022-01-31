@@ -64,13 +64,14 @@
         
                             </div>
                         </div><!-- END .commentsDisplay -->
-                        <form action="#" class="commentsForm">
-        
-                            <label for="name" class="sr-only">Name</label>
-                            <input type="text" id="name" placeholder="Name">
-        
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" id="email" placeholder="Email Address">
+                        <form action="#" class="commentsForm">                            
+                            <div class="formUserInfo">
+                                <label for="name" class="sr-only">Name</label>
+                                <input type="text" id="name" placeholder="Name">
+            
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" id="email" placeholder="Email Address">
+                            </div>
         
                             <label for="comment" class="sr-only">Message for me</label>
                             <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comment"></textarea>
@@ -82,22 +83,24 @@
             </div><!-- END .blogContent -->
     
             <div class="blogSidebar">
-                <div class="wrapper">
-                    <div class="sidebarTextContainer">
-                        <h4>Our Mission</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus repudiandae esse, minima sint blanditiis delectus?</p>
-                        <a href="#">Find out more.</a>
-                    </div>
-                    <div class="sidebarTextContainer">
-                        <h4>Recent Posts</h4>
-                        <ul>
-                            <li>Lorem ipsum dolor sit.</li>
-                            <li>Reiciendis a aliquam molestiae?</li>
-                            <li>Similique aperiam dicta eos.</li>
-                            <li>Nobis nemo dolorum nam!</li>
-                        </ul>
-                    </div><!-- END .sidebarTextContainer -->
-                </div><!-- END .wrapper -->
+                <div class="blogSidebarContainer">
+                    <div class="wrapper">
+                        <div class="sidebarTextContainer">
+                            <h4>Our Mission</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus repudiandae esse, minima sint blanditiis delectus?</p>
+                            <a href="./index.html"><p>Find out more.</p></a>
+                        </div>
+                        <div class="sidebarTextContainer">
+                            <h4>Recent Posts</h4>
+                            <ul>
+                                <li><p>Lorem ipsum dolor sit.</p></li>
+                                <li><p>Reiciendis a aliquam molestiae?</p></li>
+                                <li><p>Similique aperiam dicta eos.</p></li>
+                                <li><p>Nobis nemo dolorum nam!</p></li>
+                            </ul>
+                        </div><!-- END .sidebarTextContainer -->
+                    </div><!-- END .wrapper -->
+                </div><!-- END .blogSidebarContainer -->
             </div><!-- END .blogSidebar -->
         </div><!-- END .blogContainer -->
     </main>

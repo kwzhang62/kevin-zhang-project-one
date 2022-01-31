@@ -68,7 +68,9 @@ header h5 {
     }
 }
 
-p {
+p,
+input,
+textarea {
     font-family: $bodyFont;
     font-weight: normal;
     font-size: 20px;

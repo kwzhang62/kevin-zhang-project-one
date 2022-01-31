@@ -27,7 +27,7 @@ header {
             cursor: default;
         }
         &::after {
-        content: '';
+            content: '';
             background-image: url("../assets/header-box.png");
             background-position: top left;
             background-size: 100%;

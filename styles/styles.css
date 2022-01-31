@@ -298,21 +298,29 @@ header h5 {
   text-align: center;
 }
 
-p {
+p,
+input,
+textarea {
   font-family: "Lato";
   font-weight: normal;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 2px;
 }
-p.postDate {
+p.postDate,
+input.postDate,
+textarea.postDate {
   font-style: italic;
   letter-spacing: 1px;
 }
-p.postDate span {
+p.postDate span,
+input.postDate span,
+textarea.postDate span {
   font-weight: bold;
 }
-p.commentDate {
+p.commentDate,
+input.commentDate,
+textarea.commentDate {
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -634,6 +642,7 @@ main.blog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 100px;
 }
 
 .blogContent {
@@ -671,6 +680,9 @@ main.blog {
 .blogComments {
   padding-left: 7%;
 }
+.blogComments .commentsDisplay {
+  margin-bottom: 40px;
+}
 .blogComments .commentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -688,9 +700,106 @@ main.blog {
 
 .blogSidebar {
   width: 37.5%;
-  padding-left: 12.5%;
+  padding-top: 150px;
+  right: 0;
+}
+.blogSidebar .blogSidebarContainer {
+  background-color: #F8FB05;
+  padding-top: 400px;
+  padding-bottom: 20px;
+  max-width: 400px;
   position: absolute;
   right: 0;
+  -webkit-box-shadow: 0 -20% px 0 0 #F8FB05;
+          box-shadow: 0 -20% px 0 0 #F8FB05;
+}
+.blogSidebar .blogSidebarContainer::before {
+  content: "";
+  background-image: url("../assets/sidebar-image.jpg");
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 90%;
+  max-width: 450px;
+  position: absolute;
+  right: 0;
+  bottom: 550px;
+}
+.blogSidebar .sidebarTextContainer {
+  margin-bottom: 20px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.commentsForm input,
+.commentsForm textarea {
+  background-color: #E0FDDF;
+}
+
+.formUserInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+input {
+  width: 45%;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  border: none;
+  border-bottom: 2px solid #065635;
+}
+
+textarea {
+  border: 2px solid #065635;
+  margin-bottom: 25px;
+}
+
+input,
+textarea {
+  padding: 25px 0 25px 25px;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #151514;
+  opacity: 1;
+  text-transform: uppercase;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #151514;
+  opacity: 1;
+  text-transform: uppercase;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #151514;
+  opacity: 1;
+  text-transform: uppercase;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #151514;
+  opacity: 1;
+  text-transform: uppercase;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #151514;
+  opacity: 1;
+  text-transform: uppercase;
+}
+input:focus,
+textarea:focus {
+  outline: none;
 }
 
 footer {

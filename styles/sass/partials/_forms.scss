@@ -1,0 +1,42 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.commentsForm {
+    input,
+    textarea {
+        background-color: $primary;
+    }
+}
+
+.formUserInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 45%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border: none;
+    border-bottom: 2px solid $buttonColour;
+}
+
+textarea {
+    border: 2px solid $buttonColour;
+    margin-bottom: 25px;
+}
+
+input,
+textarea {
+    padding: 25px 0 25px 25px;
+    &::placeholder {
+        color: $black;
+        opacity: 1;
+        text-transform: uppercase;
+    }    
+    &:focus {
+        outline: none;
+    }
+}
