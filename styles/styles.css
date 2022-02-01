@@ -513,7 +513,7 @@ section.gallery ul li img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 100px 0 200px;
+  padding: 100px 0;
 }
 .connectContainer .connectItemContainer {
   padding-left: 70px;
@@ -581,15 +581,18 @@ section.programs {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 100px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0;
 }
 .programsContainer .programsTextContainer,
 .programsContainer .imageContainer {
-  width: 50%;
+  width: clamp(640px, 40%, 800px);
 }
 .programsContainer .programsTextContainer img,
 .programsContainer .imageContainer img {
-  width: calc(50vw - 125px);
+  width: 675px;
 }
 .programsContainer .programsTextContainer button.defaultButton,
 .programsContainer .imageContainer button.defaultButton {
