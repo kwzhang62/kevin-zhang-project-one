@@ -317,3 +317,45 @@
         display: block;
     }
 }
+
+@media (max-width: 650px) {
+    .homeHeader {
+        margin-bottom: 0;
+        .navContainer {
+            h5 {
+                padding-right: 0;
+                width: 0;
+            }
+            .navLinks {
+                width: 100%;
+                min-width: max-content;
+            }
+            &::after {
+                content: none;
+            }
+        }
+        h1 {
+            font-size: 50px;
+        }
+    }
+
+    .blogHeader,
+    .contactHeader {
+        .navLinks {
+            min-width: max-content;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        } 
+    }
+
+    .introContainer {
+        .imageContainer {
+            img {
+                left: 20%;
+            }
+        } 
+    }    
+}
