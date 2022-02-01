@@ -713,7 +713,6 @@ main.blog {
 .blogSidebar {
   width: 37.5%;
   padding-top: 150px;
-  right: 0;
 }
 .blogSidebar .blogSidebarContainer {
   background-color: #F8FB05;
@@ -761,8 +760,9 @@ main.contact {
   padding-top: 150px;
   padding-left: 5%;
 }
-.contactInfoContainer a.bodyCopy + p {
-  margin-top: 30px;
+
+.contactEmail {
+  margin-bottom: 30px;
 }
 
 .contactSocials {
@@ -941,5 +941,65 @@ footer {
   }
   .introContainer .imageContainer img {
     max-width: 80%;
+  }
+}
+@media (max-width: 1200px) {
+  .blogContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 0;
+    min-height: 100%;
+  }
+
+  .blogContent {
+    width: 80%;
+  }
+  .blogContent .blogPost {
+    padding-left: 0;
+    border: 10px solid #F8FB05;
+    position: relative;
+  }
+  .blogContent .blogPost::before {
+    width: calc(100% + 20px);
+    right: -10px;
+    -webkit-box-shadow: 0 0 0 0 #F8FB05;
+            box-shadow: 0 0 0 0 #F8FB05;
+  }
+
+  .blogComments {
+    padding-left: 0;
+  }
+
+  .blogSidebar {
+    width: 100%;
+    padding-top: 100px;
+    right: 0;
+  }
+  .blogSidebar .blogSidebarContainer {
+    position: static;
+    padding: 25px 0;
+    max-width: none;
+    -webkit-box-shadow: 0 0 0 0 #F8FB05;
+            box-shadow: 0 0 0 0 #F8FB05;
+  }
+  .blogSidebar .blogSidebarContainer .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .blogSidebar .blogSidebarContainer::before {
+    content: none;
+  }
+  .blogSidebar .sidebarTextContainer {
+    padding-left: 5%;
+    width: 45%;
   }
 }

@@ -78,3 +78,81 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .blogContainer {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+        min-height: 100%;
+    }
+    
+    .blogContent {
+        width: 80%;
+        .blogPost {
+            padding-left: 0;
+            border: 10px solid $highlightColour;
+            position: relative;
+            &::before {
+                width: calc(100% + 20px);
+                right: -10px;
+                box-shadow: 0 0 0 0 $highlightColour;
+            }
+        }
+    }
+    
+    .blogComments {
+        padding-left: 0;
+    }
+    
+    .blogSidebar {
+        width: 100%;
+        padding-top: 100px;
+        right: 0;
+        .blogSidebarContainer {
+            position: static;
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+            }
+            padding: 25px 0;
+            max-width: none;
+            &::before {
+                content: none;
+            }
+            box-shadow: 0 0 0 0 $highlightColour;;
+        }
+        .sidebarTextContainer {
+            padding-left: 5%;
+            width: 45%;
+        }
+    }
+}
+
+    // .contactContainer {
+    //     flex-direction: column;
+    // }
+
+    // .contactFormContainer {
+    //     left: 0;
+    //     width: 100%;
+    // }
+
+    // .contactInfoContainer {
+    //     width: 25%;
+    //     padding-top: 150px;
+    //     padding-left: 5%;
+    //     a.bodyCopy + p {
+    //         margin-top: 30px;
+    //     }
+    // }
+       
+    // .contactSocials {
+    //     width: 150px;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     margin-bottom: 25px;
+    //     a i {        
+    //         color: $buttonColour;
+    //     }
+    // }

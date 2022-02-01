@@ -224,7 +224,6 @@ main.blog {
 .blogSidebar {
     width: 37.5%;
     padding-top: 150px;
-    right: 0;
     .blogSidebarContainer {
         background-color: $highlightColour;
         padding-top: 400px;
@@ -270,9 +269,10 @@ main.contact {
     width: 25%;
     padding-top: 150px;
     padding-left: 5%;
-    a.bodyCopy + p {
-        margin-top: 30px;
-    }
+}
+
+.contactEmail {
+    margin-bottom: 30px;
 }
 
 .contactSocials {
