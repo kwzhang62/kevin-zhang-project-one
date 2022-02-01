@@ -471,7 +471,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 .introContainer .introTextContainer {
   width: 65%;
@@ -741,6 +741,10 @@ main.blog {
 .blogSidebar .sidebarTextContainer {
   margin-bottom: 20px;
 }
+.blogSidebar .sidebarTextContainer a:hover,
+.blogSidebar .sidebarTextContainer a:focus {
+  border-bottom: 2px solid #065635;
+}
 
 main.contact {
   background-color: #E0FDDF;
@@ -922,6 +926,13 @@ footer {
     padding-left: 0;
   }
 
+  .navLinks ul {
+    padding-right: 0;
+  }
+
+  .introContainer {
+    margin-bottom: 100px;
+  }
   .introContainer .introTextContainer {
     width: 50%;
   }

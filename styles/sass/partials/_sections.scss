@@ -16,7 +16,7 @@
             box-shadow: -20px 20px 0 0 $highlightColour;
         }
     }
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 
 section.gallery {
@@ -249,6 +249,10 @@ main.blog {
     }
     .sidebarTextContainer {
         margin-bottom: 20px;
+        a:hover,
+        a:focus {
+            border-bottom: 2px solid $buttonColour;
+        }
     }
 }
 

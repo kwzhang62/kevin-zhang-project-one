@@ -59,7 +59,14 @@
         }
     }
 
+    .navLinks {
+        ul {
+            padding-right: 0;
+        }
+    }
+
     .introContainer {
+        margin-bottom: 100px;
         .introTextContainer {
             width: 50%;
         }
