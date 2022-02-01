@@ -69,6 +69,10 @@
         margin-bottom: 100px;
         .introTextContainer {
             width: 50%;
+            p {    
+                height: 200px;
+                overflow: hidden;
+            }
         }
         .imageContainer {
             width: 50%;
@@ -129,30 +133,55 @@
     }
 }
 
-    // .contactContainer {
-    //     flex-direction: column;
-    // }
+@media (max-width: 1000px) {
+    .programsContainer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0;
+        .programsTextContainer,
+        .imageContainer {
+            width: 100%;
+            p {
+                max-height: none;
+                overflow: none;
+            }
+        }
+        .imageContainer:nth-child(1),
+        .imageContainer:nth-child(4) {
+            padding: 0;
+            img {
+                position: relative;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        .programsTextContainer:nth-child(2) {
+            padding: 50px 0;
+        }
+        .programsTextContainer:nth-child(3) {
+            padding: 50px 0;
+        }
+    }
+    section.search {
+        padding: 100px 0;
+    }
 
-    // .contactFormContainer {
-    //     left: 0;
-    //     width: 100%;
-    // }
+    .contactContainer {
+        flex-direction: column;
+    }
 
-    // .contactInfoContainer {
-    //     width: 25%;
-    //     padding-top: 150px;
-    //     padding-left: 5%;
-    //     a.bodyCopy + p {
-    //         margin-top: 30px;
-    //     }
-    // }
-       
-    // .contactSocials {
-    //     width: 150px;
-    //     display: flex;
-    //     justify-content: space-between;
-    //     margin-bottom: 25px;
-    //     a i {        
-    //         color: $buttonColour;
-    //     }
-    // }
+    .contactFormContainer {
+        left: 0;
+        width: 100%;
+    }
+
+    .contactInfoContainer {
+        width: 100%;
+        padding: 0 10% 0 15%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: -50px;
+    }
+}
