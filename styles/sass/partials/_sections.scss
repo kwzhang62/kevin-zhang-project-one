@@ -91,6 +91,12 @@ section.gallery {
             left: 0;
             top: -5px;
         }
+        &:hover,
+        &:focus {
+            p {
+                font-weight: bold;
+            }
+        }
     }
 }
 

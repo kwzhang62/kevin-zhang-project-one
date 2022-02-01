@@ -570,6 +570,9 @@ section.gallery ul li img {
   left: 0;
   top: -5px;
 }
+.connectContainer .connectItemContainer:hover p, .connectContainer .connectItemContainer:focus p {
+  font-weight: bold;
+}
 
 section.programs {
   background-color: #E0FDDF;
@@ -1071,5 +1074,145 @@ footer {
             justify-content: space-between;
     position: relative;
     top: -50px;
+  }
+}
+@media (max-width: 900px) {
+  header .navContainer h5 {
+    padding-right: 5%;
+  }
+
+  .homeHeader {
+    height: 65vw;
+    min-height: 300px;
+  }
+  .homeHeader .navContainer::after {
+    top: 300px;
+    width: 55vw;
+    max-height: 400px;
+  }
+
+  .introContainer {
+    margin-bottom: 50px;
+  }
+  .introContainer .introTextContainer {
+    min-width: 275px;
+  }
+  .introContainer .imageContainer img {
+    max-width: 256px;
+  }
+
+  section.gallery {
+    padding: 50px 0;
+  }
+
+  .connectContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 50px 0 0;
+  }
+  .connectContainer .connectItemContainer {
+    padding-left: 70px;
+    padding-bottom: 50px;
+    width: 80%;
+    position: relative;
+  }
+  .connectContainer .connectItemContainer:nth-child(1) .connectItem::before {
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+  .connectContainer .connectItemContainer:nth-child(2) .connectItem::before {
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+  .connectContainer .connectItemContainer:nth-child(3) .connectItem::before {
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+  .connectContainer .connectItemContainer:nth-child(4) .connectItem::before {
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+
+  section.banner {
+    min-height: 250px;
+  }
+}
+@media (max-width: 750px) {
+  .introContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  .introContainer .introTextContainer {
+    width: 100%;
+  }
+  .introContainer .imageContainer {
+    width: 100%;
+    height: 400px;
+  }
+  .introContainer .imageContainer img {
+    max-width: 304px;
+    position: relative;
+    left: 25%;
+    top: 10%;
+  }
+
+  .blogSidebar .blogSidebarContainer .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blogSidebar .sidebarTextContainer {
+    width: 95%;
+  }
+
+  .formUserInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  input {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    margin-top: 50px;
+  }
+
+  .contactInfoContainer {
+    padding-left: 20%;
+    display: block;
   }
 }
