@@ -357,5 +357,45 @@
                 left: 20%;
             }
         } 
-    }    
+    }
+
+    section.gallery {
+        padding-bottom: 0;
+        ul {
+            flex-direction: column;
+            li {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+        }
+    }   
+
+    .contactFormContainer {
+        padding: 20px
+    }  
+}
+
+@media (max-width: 375px) {
+    .homeHeader {
+        h1 {
+            font-size: 40px;
+        }
+    }
+    .navContainer {
+        a {
+        font-size: 16px;
+        }
+    }
+
+    .introContainer {
+        .imageContainer {
+            img {
+                left: 5%;
+            }
+        }
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
 }
