@@ -46,7 +46,7 @@ app.setFormListener = () => {
                         <p>Click <a href="./index.html" style="text-decoration: revert; color: blue">here</a> to return to the home page.</p>
                     `;
                     body.style.textAlign = "center";
-                    //reload the page after 7 seconds
+                    //reload the page after 7 seconds - inspired by jenn's contact form message
                     setTimeout(() => {location.reload()}, 7000);
                 }
             }
