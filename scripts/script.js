@@ -33,6 +33,8 @@ app.setFormListener = () => {
             if(formButton.parentElement.className == "commentsForm") {
                 let postDate = app.getFormattedDate();
                 const commentElement = app.createBlogComment(userName, postDate, userText);
+                const commentDisplay = document.querySelector('.commentsDisplay');
+                commentDisplay.appendChild(commentElement);
             }
         }
     });
@@ -62,6 +64,7 @@ app.createBlogComment = (name, date, comment) => {
     //create the comment text, author, and post date and add
     const commentDate = document.createElement("p");
     commentDate.textContent = `${date.day} ${date.month} ${date.date}${date.dateSuffix}, ${date.year} by ${name}`;
+    commentDate.className = "commentDate";
     const commentText = document.createElement("p");
     commentText.textContent = `${comment}`;
     commentTextContainer.appendChild(commentDate);
