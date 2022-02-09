@@ -37,6 +37,17 @@ app.setFormListener = () => {
                     const commentElement = app.createBlogComment(userName, postDate, userText);
                     const commentDisplay = document.querySelector('.commentsDisplay');
                     commentDisplay.appendChild(commentElement);
+                } else if(formButton.parentElement.className == "contactForm") {
+                    const body = document.querySelector('body');
+                    //change page to show submit message
+                    body.innerHTML = `
+                        <p>Thank you for contacting Sanctuary Helpers!</p>
+                        <p>The page will reload shortly...</p>
+                        <p>Click <a href="./index.html" style="text-decoration: revert; color: blue">here</a> to return to the home page.</p>
+                    `;
+                    body.style.textAlign = "center";
+                    //reload the page after 7 seconds
+                    setTimeout(() => {location.reload()}, 7000);
                 }
             }
         });
