@@ -23,12 +23,17 @@ app.setFormListener = () => {
         //get the user's info
         let userName = document.getElementById('name').value;
         let userEmail = document.getElementById('email').value; //currently unused
+        let userText = document.querySelector('textarea').value
 
-        //different logic depending on which form is submitted
-        if(formButton.parentElement.className == "commentsForm") {
-            let userComment = document.getElementById('comment').value;
-            let postDate = app.getFormattedDate();
-            console.log(postDate);
+        //input validation to make sure the user entered both a name and a comment
+        if(!(userName && userText)) {
+            alert("Please enter your name and a message.");
+        } else {
+            //different logic depending on which form is submitted
+            if(formButton.parentElement.className == "commentsForm") {
+                let postDate = app.getFormattedDate();
+                const commentElement = app.createBlogComment(userName, postDate, userText);
+            }
         }
     });
 }
@@ -56,7 +61,7 @@ app.createBlogComment = (name, date, comment) => {
 
     //create the comment text, author, and post date and add
     const commentDate = document.createElement("p");
-    // commentDate.textContent = `${} by ${name}`;
+    commentDate.textContent = `${date.day} ${date.month} ${date.date}${date.dateSuffix}, ${date.year} by ${name}`;
     const commentText = document.createElement("p");
     commentText.textContent = `${comment}`;
     commentTextContainer.appendChild(commentDate);
