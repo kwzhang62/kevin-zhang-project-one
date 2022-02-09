@@ -17,27 +17,30 @@ app.setAboutListener = () => {
 //set a click listener for the submitting the forms
 app.setFormListener = () => {
     const formButton = document.querySelector('form button');
-    console.log();
-    formButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        //get the user's info
-        let userName = document.getElementById('name').value;
-        let userEmail = document.getElementById('email').value; //currently unused
-        let userText = document.querySelector('textarea').value
 
-        //input validation to make sure the user entered both a name and a comment
-        if(!(userName && userText)) {
-            alert("Please enter your name and a message.");
-        } else {
-            //different logic depending on which form is submitted
-            if(formButton.parentElement.className == "commentsForm") {
-                let postDate = app.getFormattedDate();
-                const commentElement = app.createBlogComment(userName, postDate, userText);
-                const commentDisplay = document.querySelector('.commentsDisplay');
-                commentDisplay.appendChild(commentElement);
+    //checks if there is a form submission button on the page
+    if(formButton) {
+        formButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            //get the user's info
+            let userName = document.getElementById('name').value;
+            let userEmail = document.getElementById('email').value; //currently unused
+            let userText = document.querySelector('textarea').value
+    
+            //input validation to make sure the user entered both a name and a comment
+            if(!(userName && userText)) {
+                alert("Please enter your name and a message.");
+            } else {
+                //different logic depending on which form is submitted
+                if(formButton.parentElement.className == "commentsForm") {
+                    let postDate = app.getFormattedDate();
+                    const commentElement = app.createBlogComment(userName, postDate, userText);
+                    const commentDisplay = document.querySelector('.commentsDisplay');
+                    commentDisplay.appendChild(commentElement);
+                }
             }
-        }
-    });
+        });
+    }
 }
 
 //function for creating a blog comment element
